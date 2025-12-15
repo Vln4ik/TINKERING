@@ -1,4 +1,4 @@
-# Twinby-like Dating App (MVP)
+# Tinkering dating APP(MVP)
 
 Монорепо: **backend (FastAPI + Postgres)** и **android (Kotlin + Jetpack Compose)**.
 
