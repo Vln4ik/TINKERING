@@ -1,0 +1,42 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-twinby}
+      POSTGRES_USER: ${POSTGRES_USER:-twinby}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-twinby_password_change_me}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      APP_NAME: ${APP_NAME:-twinby-mvp}
+      ENV: ${ENV:-dev}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:8080}
+      JWT_SECRET: ${JWT_SECRET:-change_me_please}
+      JWT_EXPIRES_MIN: ${JWT_EXPIRES_MIN:-10080}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://twinby:twinby_password_change_me@db:5432/twinby}
+      UPLOAD_DIR: ${UPLOAD_DIR:-/app/uploads}
+      RECO_SERVICE_URL: ${RECO_SERVICE_URL:-}
+      GIGACHAT_CREDENTIALS: ${GIGACHAT_CREDENTIALS:-}
+      GIGACHAT_SCOPE: ${GIGACHAT_SCOPE:-GIGACHAT_API_PERS}
+      GIGACHAT_MODEL: ${GIGACHAT_MODEL:-GigaChat-2-Pro}
+      GIGACHAT_VERIFY_SSL: ${GIGACHAT_VERIFY_SSL:-true}
+    volumes:
+      - uploads:/app/uploads
+      - ./certs:/app/extra-ca:ro
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+volumes:
+  pg_data:
+  uploads:
+
+
