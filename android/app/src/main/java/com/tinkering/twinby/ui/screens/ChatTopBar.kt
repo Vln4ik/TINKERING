@@ -40,44 +40,64 @@ fun ChatTopBar(
         stroke = Color.White.copy(alpha = 0.12f),
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
+            // Left: Back button
             Row(
                 modifier = Modifier.clickable { onBack() },
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
             ) {
                 Icon(
                     imageVector = Icons.Filled.ArrowBackIosNew,
                     contentDescription = "Back",
-                    tint = MaterialTheme.colorScheme.primary
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(20.dp)
                 )
                 Spacer(Modifier.size(6.dp))
-                Text("Назад", color = MaterialTheme.colorScheme.primary)
+                Text(
+                    "Назад",
+                    color = MaterialTheme.colorScheme.primary,
+                    style = MaterialTheme.typography.bodyMedium
+                )
             }
 
+            // Center: Title and subtitle
             Column(
-                modifier = Modifier.weight(1f).padding(horizontal = 10.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                modifier = Modifier.weight(1f).padding(horizontal = 16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
-                Text(title, color = Color.White, style = MaterialTheme.typography.titleLarge, maxLines = 1)
+                Text(
+                    title,
+                    color = Color.White,
+                    style = MaterialTheme.typography.titleLarge,
+                    maxLines = 1
+                )
                 if (!subtitle.isNullOrBlank()) {
-                    Text(subtitle, color = Color.White.copy(alpha = 0.65f), style = MaterialTheme.typography.bodySmall, maxLines = 1)
+                    Spacer(Modifier.size(2.dp))
+                    Text(
+                        subtitle,
+                        color = Color.White.copy(alpha = 0.65f),
+                        style = MaterialTheme.typography.bodySmall,
+                        maxLines = 1
+                    )
                 }
             }
 
-            Box(modifier = Modifier.size(40.dp), contentAlignment = Alignment.Center) {
+            // Right: Avatar placeholder (fixed width to balance layout)
+            Box(
+                modifier = Modifier.size(40.dp),
+                contentAlignment = Alignment.Center
+            ) {
                 if (!photoUrl.isNullOrBlank()) {
                     AsyncImage(
                         model = photoUrl,
                         contentDescription = title,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.size(40.dp).clip(CircleShape)
-                    )
-                } else {
-                    Box(
-                        modifier = Modifier.size(40.dp).clip(CircleShape),
                     )
                 }
             }

@@ -45,9 +45,8 @@ fun BottomNavBar(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(72.dp)
-                .padding(horizontal = 10.dp, vertical = 10.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
+                .padding(horizontal = 8.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
             NavPillItem(
@@ -82,33 +81,32 @@ private fun NavPillItem(
     val tint = if (selected) MaterialTheme.colorScheme.primary else Color.White.copy(alpha = 0.86f)
     val textColor = if (selected) MaterialTheme.colorScheme.primary else Color.White.copy(alpha = 0.86f)
 
-    val innerModifier = if (selected) {
-        Modifier
-            .clip(RoundedCornerShape(24.dp))
-            .padding(horizontal = 18.dp, vertical = 10.dp)
-            .then(
-                Modifier
-            )
-    } else {
-        Modifier.padding(horizontal = 18.dp, vertical = 10.dp)
-    }
-
     GlassSurface(
         modifier = Modifier
             .clip(RoundedCornerShape(24.dp))
             .clickable { onClick() },
         corner = 24.dp,
-        tint = if (selected) Color.White.copy(alpha = 0.08f) else Color.Transparent,
+        tint = if (selected) MaterialTheme.colorScheme.primary.copy(alpha = 0.2f) else Color.Transparent,
         stroke = if (selected) Color.White.copy(alpha = 0.10f) else Color.Transparent,
     ) {
         Column(
-            modifier = innerModifier,
+            modifier = Modifier
+                .padding(horizontal = 20.dp, vertical = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Icon(imageVector = icon, contentDescription = label, tint = tint)
+            Icon(
+                imageVector = icon,
+                contentDescription = label,
+                tint = tint,
+                modifier = Modifier.size(24.dp)
+            )
             Spacer(Modifier.size(4.dp))
-            Text(label, color = textColor, style = MaterialTheme.typography.labelLarge)
+            Text(
+                label,
+                color = textColor,
+                style = MaterialTheme.typography.labelSmall
+            )
         }
     }
 }
