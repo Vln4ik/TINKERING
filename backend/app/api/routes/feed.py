@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import uuid
 
+from fastapi import Request
 from fastapi import APIRouter, Depends
 from sqlalchemy import and_, not_, select
 from sqlalchemy.orm import Session
@@ -17,13 +18,15 @@ from app.services.reco_client import RecoClient
 router = APIRouter(prefix="", tags=["feed"])
 
 
-def _photo_url(photo_path: str) -> str:
+def _photo_url(request: Request, photo_path: str) -> str:
     name = os.path.basename(photo_path)
-    return f"{settings.public_base_url.rstrip('/')}/static/{name}"
+    base = str(request.base_url).rstrip("/")
+    return f"{base}/static/{name}"
 
 
 @router.get("/feed", response_model=FeedResponse)
 async def get_feed(
+    request: Request,
     limit: int = 20,
     user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
@@ -63,7 +66,7 @@ async def get_feed(
                 gender=profile.gender.value,
                 age=profile.age,
                 about=profile.about,
-                photo_url=_photo_url(profile.photo_path),
+                photo_url=_photo_url(request, profile.photo_path),
                 interests=interests,
             )
         )

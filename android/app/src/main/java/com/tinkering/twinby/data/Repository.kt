@@ -92,6 +92,16 @@ class Repository(private val tokenStore: TokenStore) {
     suspend fun sendMessage(chatId: String, text: String): MessageItem =
         api.sendMessage(chatId, SendMessageRequest(text = text))
 
+    suspend fun uploadChatAttachment(chatId: String, file: File, mimeType: String? = null): AttachmentResponse {
+        val media = (mimeType ?: "application/octet-stream").toMediaType()
+        val part = MultipartBody.Part.createFormData(
+            name = "file",
+            filename = file.name,
+            body = file.asRequestBody(media)
+        )
+        return api.uploadChatAttachment(chatId, part)
+    }
+
     suspend fun supportMessages(): List<SupportMessageItem> = api.supportMessages()
 
     suspend fun sendSupport(text: String): SendSupportMessageResponse =

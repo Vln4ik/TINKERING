@@ -1,5 +1,6 @@
 package com.tinkering.twinby.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -27,12 +28,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.tinkering.twinby.data.ChatSeenStore
 import com.tinkering.twinby.data.ChatListItem
 import com.tinkering.twinby.data.Repository
 import com.tinkering.twinby.data.SupportMessageItem
 import com.tinkering.twinby.ui.glass.GlassSurface
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import java.time.Instant
+import java.time.OffsetDateTime
 
 @Composable
 fun ChatsScreen(
@@ -41,10 +48,13 @@ fun ChatsScreen(
     onOpenChat: (chatId: String) -> Unit,
     onOpenSupport: () -> Unit,
 ) {
+    val ctx = LocalContext.current
     val loading = remember { mutableStateOf(true) }
     val error = remember { mutableStateOf<String?>(null) }
     val chats = remember { mutableStateOf(listOf<ChatListItem>()) }
     val supportLast = remember { mutableStateOf<SupportMessageItem?>(null) }
+    val seenStore = remember { ChatSeenStore() }
+    val seenMap = remember { mutableStateOf<Map<String, String>>(emptyMap()) }
 
     LaunchedEffect(Unit) {
         loading.value = true
@@ -52,6 +62,13 @@ fun ChatsScreen(
             chats.value = repo.chats()
             val support = repo.supportMessages()
             supportLast.value = support.lastOrNull()
+            // load seen markers
+            val m = mutableMapOf<String, String>()
+            for (c in chats.value) {
+                val s = seenStore.getSeen(ctx, c.chat_id)
+                if (s != null) m[c.chat_id] = s
+            }
+            seenMap.value = m
         } catch (e: Exception) {
             error.value = e.message
         } finally {
@@ -59,9 +76,28 @@ fun ChatsScreen(
         }
     }
 
+    // Poll chat list so newly sent/received messages move dialogs up (MVP).
+    LaunchedEffect(Unit) {
+        while (isActive) {
+            delay(3000)
+            try {
+                val latest = repo.chats()
+                if (latest.size != chats.value.size || latest.firstOrNull()?.last_message_at != chats.value.firstOrNull()?.last_message_at) {
+                    chats.value = latest
+                    val m = mutableMapOf<String, String>()
+                    for (c in latest) {
+                        val s = seenStore.getSeen(ctx, c.chat_id)
+                        if (s != null) m[c.chat_id] = s
+                    }
+                    seenMap.value = m
+                }
+            } catch (_: Exception) {
+            }
+        }
+    }
+
     Column(modifier = Modifier.padding(padding)) {
-        Text("Чаты", style = MaterialTheme.typography.headlineSmall, color = Color.White)
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(4.dp))
 
         when {
             loading.value -> CircularProgressIndicator()
@@ -78,7 +114,9 @@ fun ChatsScreen(
                     Text("Пока нет диалогов", color = Color.White)
                 } else {
                     chats.value.forEach { item ->
-                        ChatRow(item = item, onClick = { onOpenChat(item.chat_id) })
+                        val seen = seenMap.value[item.chat_id]
+                        val unread = isUnread(item.last_message_at, seen)
+                        ChatRow(item = item, unread = unread, onClick = { onOpenChat(item.chat_id) })
                         Spacer(Modifier.height(12.dp))
                     }
                 }
@@ -87,15 +125,35 @@ fun ChatsScreen(
     }
 }
 
+private fun isUnread(lastAt: String?, seenAt: String?): Boolean {
+    if (lastAt.isNullOrBlank()) return false
+    if (seenAt.isNullOrBlank()) return true
+    fun parse(s: String): Long? {
+        return try {
+            Instant.parse(s).toEpochMilli()
+        } catch (_: Exception) {
+            try {
+                OffsetDateTime.parse(s).toInstant().toEpochMilli()
+            } catch (_: Exception) {
+                null
+            }
+        }
+    }
+    val a = parse(lastAt)
+    val b = parse(seenAt)
+    if (a != null && b != null) return a > b
+    // fallback: ISO strings often compare lexicographically
+    return lastAt > seenAt
+}
+
 @Composable
-private fun ChatRow(item: ChatListItem, onClick: () -> Unit) {
+private fun ChatRow(item: ChatListItem, unread: Boolean, onClick: () -> Unit) {
     GlassSurface(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() }
             .padding(vertical = 2.dp),
-        corner = 20.dp,
-        blurRadius = 18.dp
+        corner = 20.dp
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
@@ -109,7 +167,17 @@ private fun ChatRow(item: ChatListItem, onClick: () -> Unit) {
                 modifier = Modifier.size(48.dp).clip(CircleShape)
             )
             Column(modifier = Modifier.weight(1f)) {
-                Text(item.other_name, color = Color.White)
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(item.other_name, color = Color.White)
+                    if (unread) {
+                        Box(
+                            modifier = Modifier
+                                .size(8.dp)
+                                .clip(CircleShape)
+                                .background(Color(0xFF3B82F6))
+                        )
+                    }
+                }
                 Text(item.last_message ?: "Начните диалог", color = Color.White.copy(alpha = 0.7f), maxLines = 1)
             }
         }
@@ -122,8 +190,7 @@ private fun SupportRow(lastText: String, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        corner = 22.dp,
-        blurRadius = 20.dp
+        corner = 22.dp
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
@@ -146,7 +213,6 @@ private fun SupportRow(lastText: String, onClick: () -> Unit) {
                 Text("Техподдержка", color = Color.White)
                 Text(lastText, color = Color.White.copy(alpha = 0.7f), maxLines = 1)
             }
-            Text("Закреплено", color = Color.White.copy(alpha = 0.6f))
         }
     }
 }

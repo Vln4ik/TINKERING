@@ -1,19 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-18:12
-INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-18:12
-INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-18:12
-INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-18:12
-MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:1:1-19:12
 MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/876907f4cd4897bae7c9b555d2a1aa41/transformed/coil-compose-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/147dd85eb58d2998b74edfea06a2bffd/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/52d4c3ba45a1af50bcc7ef661caf4bf7/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/f7be424a2134316141d6a5296d86f880/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/012d0f60dff4f7420d8b7b5edb793b1f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/af3d49579a0d63540708453f4ab9dd3e/transformed/navigation-common-2.8.4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/05de9329dc5c4fc55defa7296d09e9b0/transformed/navigation-runtime-2.8.4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/fe25d562143104f79e1e9bd3919425b1/transformed/navigation-common-ktx-2.8.4/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/6d8bc39e8a4a5962581fcb6ba70d0a4b/transformed/navigation-runtime-ktx-2.8.4/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-compose:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/ef6fd63cde26780197e44097df7dce4e/transformed/navigation-compose-2.8.4/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vinchik/.gradle/caches/8.13/transforms/dc6d91ce7705e7fccb9217a171d197df/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/1c235fa88df6fd7ae5f1f0525b59e229/transformed/activity-ktx-1.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.material:material-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/cc715fd324f4a093e406f254a557248a/transformed/material-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/d55e9147dadc51dfda8307d124cde3d8/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.animation:animation-core-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/4b80708e7f4514cb825eb21bd186f2ee/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
@@ -28,18 +34,19 @@ MERGED from [androidx.compose.ui:ui-text-android:1.7.5] /Users/vinchik/.gradle/c
 MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/52779d5bcc23cede5e6cc49cb08db06e/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/ceab2244aeab4f4345b6ca236a3e074f/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.activity:activity-compose:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/d26ccb12818fc381dbd42162136f3a85/transformed/activity-compose-1.9.3/AndroidManifest.xml:2:1-7:12
-MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:2:1-7:12
-MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/2998c88fd658eaed1c4b37a876dcd5d1/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/381e88bebe37b8c788bae9c3a5479bea/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/a850603349686fd138ccebf1f92c7dbf/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/9ea8ea141bc5454cc8ba5d829559da38/transformed/lifecycle-livedata-core-ktx-2.8.7/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1b1ab73191a65d94b853daf9fa84f56d/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/b8477da5b7c13c141c8b543b40d5b8e7/transformed/lifecycle-viewmodel-2.8.7/AndroidManifest.xml:2:1-5:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f4104b2ae98ca3fb6bdd1e20671344b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/0a2f4f8c602bc158472a2b9f821d44bc/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/a40dfb7eef9cf43d28063a874b837401/transformed/lifecycle-livedata-2.8.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/4ee6224309285471c3e6dd1f1107e714/transformed/lifecycle-viewmodel-ktx-2.8.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/7d923744b5ddf82f387f771bd22cecce/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/239998b208260acfebd1ce8a89508f06/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/vinchik/.gradle/caches/8.13/transforms/a63b0fea08b3a3a718e1824bd3c3681e/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
@@ -47,10 +54,13 @@ MERGED from [androidx.compose.material:material-icons-extended-android:1.7.5] /U
 MERGED from [androidx.compose.material:material-icons-core-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/b61be615db4986ce7f77932c9321317e/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/aa3dddf5e230eeb0edd0df295acc8e85/transformed/ui-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.foundation:foundation-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/312a3da130f654b463f9bd699acfb835/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/vinchik/.gradle/caches/8.13/transforms/ea798c4ffc715e7dcc7c420eb26b6f35/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/f1f45afcaeeb4dd844c6eae6272f3443/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/36bce4c242df78f2f73a368775c90c13/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/af5d0268242ca5fc59a1fa06bf7ba1f2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/aafc99442e14d833cae1ef593cf435f2/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/dd63c08a5e3f31b3bb08cae10ec06cfc/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/vinchik/.gradle/caches/8.13/transforms/bcdc24b68e48e7148dade9c9526d58b6/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core:1.15.0] /Users/vinchik/.gradle/caches/8.13/transforms/1ec14de043716a8b02c4038762dfd45b/transformed/core-1.15.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/903d7fda755383ae1d4b13d75fa2b0fb/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
@@ -58,15 +68,16 @@ MERGED from [androidx.core:core-ktx:1.15.0] /Users/vinchik/.gradle/caches/8.13/t
 MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/250fa679f2421666ccb92a5a276ed603/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/72b16a1d90d6759c915b3d0afe34b90f/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/5df33b8b2888881f2d61d5088264b72f/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/bc148d7c7c44dda82b4bbca3a66104fe/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/86ade7a928bb5d9a6953d060d30df5c9/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/vinchik/.gradle/caches/8.13/transforms/67fac26edc69006fa613fc2bcbd9a320/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/cfaa15b314c71360ad80aaef0e8e205e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.compose.runtime:runtime-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/0fdda8563a0c501e05cbb5e7d294f966/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/b8f6463d137e323397a83ab6f0da7362/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/vinchik/.gradle/caches/8.13/transforms/a27ae00ffdff33947404de28cc90539e/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/vinchik/.gradle/caches/8.13/transforms/1e91d29a1c47a73b80b7238385a032ca/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
 	package
 		INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml
@@ -81,14 +92,14 @@ ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest
 	android:name
 		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:2:22-64
 application
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:4:5-17:19
-INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:4:5-17:19
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:4:5-18:19
+INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:4:5-18:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/ceab2244aeab4f4345b6ca236a3e074f/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/ceab2244aeab4f4345b6ca236a3e074f/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.15.0] /Users/vinchik/.gradle/caches/8.13/transforms/1ec14de043716a8b02c4038762dfd45b/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.15.0] /Users/vinchik/.gradle/caches/8.13/transforms/1ec14de043716a8b02c4038762dfd45b/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
@@ -107,34 +118,46 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vinc
 		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:6:9-35
 	android:allowBackup
 		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:9:9-44
 	android:usesCleartextTraffic
 		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:8:9-44
 activity#com.tinkering.twinby.MainActivity
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:9:9-16:20
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:10:9-17:20
 	android:exported
-		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:11:13-36
+		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:12:13-36
 	android:name
-		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:10:13-41
+		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:11:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:12:13-15:29
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:13:13-16:29
 action#android.intent.action.MAIN
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:13:17-69
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:13:25-66
+		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:14:17-77
+ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:15:17-77
 	android:name
-		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:14:27-74
+		ADDED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml:15:27-74
 uses-sdk
 INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/vinchik/Desktop/TINKERING/android/app/src/main/AndroidManifest.xml
-MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/876907f4cd4897bae7c9b555d2a1aa41/transformed/coil-compose-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/876907f4cd4897bae7c9b555d2a1aa41/transformed/coil-compose-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/147dd85eb58d2998b74edfea06a2bffd/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/147dd85eb58d2998b74edfea06a2bffd/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/52d4c3ba45a1af50bcc7ef661caf4bf7/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/52d4c3ba45a1af50bcc7ef661caf4bf7/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/f7be424a2134316141d6a5296d86f880/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/f7be424a2134316141d6a5296d86f880/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/012d0f60dff4f7420d8b7b5edb793b1f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/012d0f60dff4f7420d8b7b5edb793b1f/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/789b616da05600a3e1e757cc06b71107/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/af3d49579a0d63540708453f4ab9dd3e/transformed/navigation-common-2.8.4/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/af3d49579a0d63540708453f4ab9dd3e/transformed/navigation-common-2.8.4/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/05de9329dc5c4fc55defa7296d09e9b0/transformed/navigation-runtime-2.8.4/AndroidManifest.xml:20:5-44
@@ -145,10 +168,12 @@ MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.4] /Users/vinchik/.g
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/6d8bc39e8a4a5962581fcb6ba70d0a4b/transformed/navigation-runtime-ktx-2.8.4/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/ef6fd63cde26780197e44097df7dce4e/transformed/navigation-compose-2.8.4/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.8.4] /Users/vinchik/.gradle/caches/8.13/transforms/ef6fd63cde26780197e44097df7dce4e/transformed/navigation-compose-2.8.4/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vinchik/.gradle/caches/8.13/transforms/dc6d91ce7705e7fccb9217a171d197df/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vinchik/.gradle/caches/8.13/transforms/dc6d91ce7705e7fccb9217a171d197df/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity-ktx:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/1c235fa88df6fd7ae5f1f0525b59e229/transformed/activity-ktx-1.9.3/AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity-ktx:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/1c235fa88df6fd7ae5f1f0525b59e229/transformed/activity-ktx-1.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/6bd8af3ac206101b88696b3426961488/transformed/activity-1.9.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.material:material-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/cc715fd324f4a093e406f254a557248a/transformed/material-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/cc715fd324f4a093e406f254a557248a/transformed/material-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/d55e9147dadc51dfda8307d124cde3d8/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
@@ -177,30 +202,32 @@ MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradl
 MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/ceab2244aeab4f4345b6ca236a3e074f/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity-compose:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/d26ccb12818fc381dbd42162136f3a85/transformed/activity-compose-1.9.3/AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity-compose:1.9.3] /Users/vinchik/.gradle/caches/8.13/transforms/d26ccb12818fc381dbd42162136f3a85/transformed/activity-compose-1.9.3/AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/60d5c1a5780065c44c8351285581a64b/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-base:2.7.0] /Users/vinchik/.gradle/caches/8.13/transforms/d99c5316cc74d27695d52ec05b4f8374/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/2998c88fd658eaed1c4b37a876dcd5d1/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/2998c88fd658eaed1c4b37a876dcd5d1/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/381e88bebe37b8c788bae9c3a5479bea/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/381e88bebe37b8c788bae9c3a5479bea/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/a850603349686fd138ccebf1f92c7dbf/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/vinchik/.gradle/caches/8.13/transforms/a850603349686fd138ccebf1f92c7dbf/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/9ea8ea141bc5454cc8ba5d829559da38/transformed/lifecycle-livedata-core-ktx-2.8.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/9ea8ea141bc5454cc8ba5d829559da38/transformed/lifecycle-livedata-core-ktx-2.8.7/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1b1ab73191a65d94b853daf9fa84f56d/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1b1ab73191a65d94b853daf9fa84f56d/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/b8477da5b7c13c141c8b543b40d5b8e7/transformed/lifecycle-viewmodel-2.8.7/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/b8477da5b7c13c141c8b543b40d5b8e7/transformed/lifecycle-viewmodel-2.8.7/AndroidManifest.xml:4:5-43
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f4104b2ae98ca3fb6bdd1e20671344b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f4104b2ae98ca3fb6bdd1e20671344b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/0a2f4f8c602bc158472a2b9f821d44bc/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/0a2f4f8c602bc158472a2b9f821d44bc/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/a40dfb7eef9cf43d28063a874b837401/transformed/lifecycle-livedata-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/a40dfb7eef9cf43d28063a874b837401/transformed/lifecycle-livedata-2.8.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/4ee6224309285471c3e6dd1f1107e714/transformed/lifecycle-viewmodel-ktx-2.8.7/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/4ee6224309285471c3e6dd1f1107e714/transformed/lifecycle-viewmodel-ktx-2.8.7/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/1f869e7231f2d8901881e628841db8b5/transformed/lifecycle-viewmodel-savedstate-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/8a8ab1996c5603708120eca626f475f4/transformed/lifecycle-livedata-core-2.8.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/7d923744b5ddf82f387f771bd22cecce/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/7d923744b5ddf82f387f771bd22cecce/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/239998b208260acfebd1ce8a89508f06/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
@@ -215,14 +242,20 @@ MERGED from [androidx.compose.ui:ui-android:1.7.5] /Users/vinchik/.gradle/caches
 MERGED from [androidx.compose.ui:ui-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/aa3dddf5e230eeb0edd0df295acc8e85/transformed/ui-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/312a3da130f654b463f9bd699acfb835/transformed/foundation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/312a3da130f654b463f9bd699acfb835/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/vinchik/.gradle/caches/8.13/transforms/ea798c4ffc715e7dcc7c420eb26b6f35/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/vinchik/.gradle/caches/8.13/transforms/ea798c4ffc715e7dcc7c420eb26b6f35/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/f1f45afcaeeb4dd844c6eae6272f3443/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/f1f45afcaeeb4dd844c6eae6272f3443/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/36bce4c242df78f2f73a368775c90c13/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/36bce4c242df78f2f73a368775c90c13/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/af5d0268242ca5fc59a1fa06bf7ba1f2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vinchik/.gradle/caches/8.13/transforms/af5d0268242ca5fc59a1fa06bf7ba1f2/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/aafc99442e14d833cae1ef593cf435f2/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/aafc99442e14d833cae1ef593cf435f2/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/dd63c08a5e3f31b3bb08cae10ec06cfc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/dd63c08a5e3f31b3bb08cae10ec06cfc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/0aa84bac43f503fc7e66b4cdd8213503/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/vinchik/.gradle/caches/8.13/transforms/bcdc24b68e48e7148dade9c9526d58b6/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/vinchik/.gradle/caches/8.13/transforms/bcdc24b68e48e7148dade9c9526d58b6/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core:1.15.0] /Users/vinchik/.gradle/caches/8.13/transforms/1ec14de043716a8b02c4038762dfd45b/transformed/core-1.15.0/AndroidManifest.xml:20:5-44
@@ -237,10 +270,12 @@ MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/vinchik/.gradle/
 MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/72b16a1d90d6759c915b3d0afe34b90f/transformed/datastore-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/5df33b8b2888881f2d61d5088264b72f/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/5df33b8b2888881f2d61d5088264b72f/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/bc148d7c7c44dda82b4bbca3a66104fe/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/bc148d7c7c44dda82b4bbca3a66104fe/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vinchik/.gradle/caches/8.13/transforms/db7d7d11a3793852572fec8aeafab1fa/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/86ade7a928bb5d9a6953d060d30df5c9/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/86ade7a928bb5d9a6953d060d30df5c9/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/vinchik/.gradle/caches/8.13/transforms/67fac26edc69006fa613fc2bcbd9a320/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
@@ -251,10 +286,10 @@ MERGED from [androidx.compose.runtime:runtime-android:1.7.5] /Users/vinchik/.gra
 MERGED from [androidx.compose.runtime:runtime-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/0fdda8563a0c501e05cbb5e7d294f966/transformed/runtime-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/b8f6463d137e323397a83ab6f0da7362/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/b8f6463d137e323397a83ab6f0da7362/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/vinchik/.gradle/caches/8.13/transforms/a27ae00ffdff33947404de28cc90539e/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/vinchik/.gradle/caches/8.13/transforms/a27ae00ffdff33947404de28cc90539e/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/vinchik/.gradle/caches/8.13/transforms/cff3d7624e3901ea06ef25fb399ceb4a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/vinchik/.gradle/caches/8.13/transforms/1e91d29a1c47a73b80b7238385a032ca/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/vinchik/.gradle/caches/8.13/transforms/1e91d29a1c47a73b80b7238385a032ca/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
@@ -268,33 +303,33 @@ ADDED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle
 	android:name
 		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.5] /Users/vinchik/.gradle/caches/8.13/transforms/ceab2244aeab4f4345b6ca236a3e074f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/vinchik/.gradle/caches/8.13/transforms/69b73afc54a6e1ea7fdf60d26b457a55/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/86ade7a928bb5d9a6953d060d30df5c9/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vinchik/.gradle/caches/8.13/transforms/86ade7a928bb5d9a6953d060d30df5c9/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:25:13-67
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
 	android:value
 		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] /Users/vinchik/.gradle/caches/8.13/transforms/95fcb8d3d35ed5c8af50272171b86ac1/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/vinchik/.gradle/caches/8.13/transforms/1be728266e2c0a75f6c4b282126905f3/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/vinchik/.gradle/caches/8.13/transforms/1ec14de043716a8b02c4038762dfd45b/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel

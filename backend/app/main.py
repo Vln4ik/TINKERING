@@ -12,6 +12,7 @@ from app.api.routes.support import router as support_router
 from app.core.config import settings
 from app.db.init_db import create_tables, seed_interests
 from app.db.session import SessionLocal
+from app.utils.default_assets import ensure_default_avatar
 from app.utils.images import ensure_dir
 
 app = FastAPI(title=settings.app_name)
@@ -28,6 +29,7 @@ app.add_middleware(
 @app.on_event("startup")
 def on_startup() -> None:
     ensure_dir(settings.upload_dir)
+    ensure_default_avatar(settings.upload_dir)
     create_tables()
     db = SessionLocal()
     try:

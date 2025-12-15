@@ -4,7 +4,6 @@ import android.content.Context
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -19,6 +18,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -35,7 +37,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberAsyncImagePainter
+import coil.compose.AsyncImage
+import androidx.compose.ui.layout.ContentScale
 import com.tinkering.twinby.data.Interests
 import com.tinkering.twinby.data.Repository
 import com.tinkering.twinby.data.TokenStore
@@ -204,16 +207,35 @@ private fun RegisterForm(
     }
 
     Row(verticalAlignment = Alignment.CenterVertically) {
-        val painter = rememberAsyncImagePainter(photoUri.value)
-        Image(
-            painter = painter,
-            contentDescription = "photo",
-            modifier = Modifier
-                .size(72.dp)
-                .clip(CircleShape)
-                .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
-                .clickable { pickPhoto.launch("image/*") }
-        )
+        val uri = photoUri.value
+        if (uri == null) {
+            androidx.compose.material3.Surface(
+                modifier = Modifier
+                    .size(72.dp)
+                    .clip(CircleShape)
+                    .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                    .clickable { pickPhoto.launch("image/*") },
+                color = Color.White.copy(alpha = 0.08f)
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Person,
+                    contentDescription = "photo",
+                    tint = Color.White.copy(alpha = 0.85f),
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
+        } else {
+            AsyncImage(
+                model = uri,
+                contentDescription = "photo",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(72.dp)
+                    .clip(CircleShape)
+                    .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                    .clickable { pickPhoto.launch("image/*") }
+            )
+        }
         Spacer(Modifier.size(12.dp))
         Text(
             text = if (photoUri.value == null) "Выбрать фото (обязательно)" else "Фото выбрано",

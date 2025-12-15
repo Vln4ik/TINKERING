@@ -54,6 +54,12 @@ data class SendMessageRequest(
     val text: String,
 )
 
+data class AttachmentResponse(
+    val url: String,
+    val name: String,
+    val mime: String?,
+)
+
 data class SupportMessageItem(
     val id: String,
     val role: String,

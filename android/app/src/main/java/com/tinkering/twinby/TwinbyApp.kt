@@ -1,13 +1,24 @@
 package com.tinkering.twinby
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import com.tinkering.twinby.data.Repository
 import com.tinkering.twinby.data.TokenStore
 import com.tinkering.twinby.ui.screens.AuthScreen
@@ -17,78 +28,119 @@ import com.tinkering.twinby.ui.screens.FeedScreen
 import com.tinkering.twinby.ui.screens.SettingsScreen
 import com.tinkering.twinby.ui.screens.SupportChatScreen
 import com.tinkering.twinby.ui.screens.BottomNavBar
-
-sealed class Route(val value: String) {
-    data object Auth : Route("auth")
-    data object Chats : Route("chats")
-    data object Feed : Route("feed")
-    data object Settings : Route("settings")
-    data object Support : Route("chats/support")
-    data object Chat : Route("chats/{chatId}") {
-        fun create(chatId: String) = "chats/$chatId"
-    }
-}
+import com.tinkering.twinby.ui.screens.BottomTab
+import com.tinkering.twinby.ui.glass.GlassBackground
 
 @Composable
 fun TwinbyApp() {
-    val nav = rememberNavController()
     val tokenStore = remember { TokenStore() }
     val repo = remember { Repository(tokenStore) }
 
-    AppNavHost(nav, repo, tokenStore)
-}
+    var authed by remember { mutableStateOf(false) }
+    var tab by remember { mutableStateOf(BottomTab.Feed) }
+    var openChatId by remember { mutableStateOf<String?>(null) }
+    var supportOpen by remember { mutableStateOf(false) }
 
-@Composable
-private fun AppNavHost(nav: NavHostController, repo: Repository, tokenStore: TokenStore) {
-    val backStack = nav.currentBackStackEntryAsState()
-    val route = backStack.value?.destination?.route ?: ""
-    val showBottom = route != Route.Auth.value
+    if (!authed) {
+        AuthScreen(
+            repo = repo,
+            tokenStore = tokenStore,
+            onAuthed = { authed = true }
+        )
+        return
+    }
 
     Scaffold(
         bottomBar = {
-            if (showBottom) {
-                BottomNavBar(
-                    currentRoute = route,
-                    onGoChats = { nav.navigate(Route.Chats.value) { launchSingleTop = true } },
-                    onGoFeed = { nav.navigate(Route.Feed.value) { launchSingleTop = true } },
-                    onGoSettings = { nav.navigate(Route.Settings.value) { launchSingleTop = true } },
-                )
-            }
+            BottomNavBar(
+                selectedTab = tab,
+                onGoChats = {
+                    // tapping bottom tabs should close overlay screens (chat/support)
+                    openChatId = null
+                    supportOpen = false
+                    tab = BottomTab.Chats
+                },
+                onGoFeed = {
+                    openChatId = null
+                    supportOpen = false
+                    tab = BottomTab.Feed
+                },
+                onGoSettings = {
+                    openChatId = null
+                    supportOpen = false
+                    tab = BottomTab.Settings
+                },
+            )
         }
     ) { padding ->
-        NavHost(navController = nav, startDestination = Route.Auth.value) {
-            composable(Route.Auth.value) {
-                AuthScreen(
-                    repo = repo,
-                    tokenStore = tokenStore,
-                    onAuthed = { nav.navigate(Route.Feed.value) { popUpTo(Route.Auth.value) { inclusive = true } } }
-                )
-            }
+        Box(modifier = Modifier.fillMaxSize()) {
+            GlassBackground()
 
-            composable(Route.Feed.value) {
-                FeedScreen(repo = repo, padding = padding, onOpenChat = { chatId -> nav.navigate(Route.Chat.create(chatId)) })
-            }
-            composable(Route.Chats.value) {
-                ChatsScreen(
-                    repo = repo,
-                    padding = padding,
-                    onOpenChat = { chatId -> nav.navigate(Route.Chat.create(chatId)) },
-                    onOpenSupport = { nav.navigate(Route.Support.value) }
-                )
-            }
-            composable(Route.Settings.value) {
-                SettingsScreen(
-                    repo = repo,
-                    padding = padding,
-                    onOpenSupport = { nav.navigate(Route.Support.value) }
-                )
-            }
-            composable(Route.Support.value) {
-                SupportChatScreen(repo = repo, padding = padding)
-            }
-            composable(Route.Chat.value) { backStackEntry ->
-                val chatId = backStackEntry.arguments?.getString("chatId").orEmpty()
-                ChatScreen(repo = repo, chatId = chatId, onBack = { nav.popBackStack() })
+            val overlayActive = supportOpen || !openChatId.isNullOrBlank()
+
+            if (!overlayActive) {
+                AnimatedContent(
+                    targetState = tab,
+                    transitionSpec = {
+                        val dir = if (targetState.ordinal > initialState.ordinal) 1 else -1
+                        (fadeIn() + slideInHorizontally(animationSpec = spring(stiffness = Spring.StiffnessMediumLow)) { it * dir })
+                            .togetherWith(
+                                fadeOut() + slideOutHorizontally(animationSpec = spring(stiffness = Spring.StiffnessMediumLow)) { -it * dir }
+                            )
+                    },
+                    label = "tabTransition"
+                ) { t ->
+                    when (t) {
+                        BottomTab.Feed -> FeedScreen(
+                            repo = repo,
+                            padding = padding,
+                            onOpenChat = { chatId ->
+                                tab = BottomTab.Chats
+                                openChatId = chatId
+                            }
+                        )
+                        BottomTab.Chats -> ChatsScreen(
+                            repo = repo,
+                            padding = padding,
+                            onOpenChat = { chatId -> openChatId = chatId },
+                            onOpenSupport = { supportOpen = true }
+                        )
+                        BottomTab.Settings -> SettingsScreen(
+                            repo = repo,
+                            padding = padding,
+                            onOpenSupport = {
+                                tab = BottomTab.Chats
+                                supportOpen = true
+                            }
+                        )
+                    }
+                }
+            } else {
+                // When an overlay is open, do NOT render the underlying tab UI (prevents visual overlap).
+                AnimatedContent(
+                    targetState = Pair(openChatId, supportOpen),
+                    transitionSpec = {
+                        (fadeIn() + slideInVertically(animationSpec = spring(stiffness = Spring.StiffnessMediumLow)) { it / 6 })
+                            .togetherWith(
+                                fadeOut() + slideOutVertically(animationSpec = spring(stiffness = Spring.StiffnessMediumLow)) { it / 6 }
+                            )
+                    },
+                    label = "overlayTransition"
+                ) { (chatId, support) ->
+                    when {
+                        support -> SupportChatScreen(
+                            repo = repo,
+                            padding = padding,
+                            onBack = { supportOpen = false }
+                        )
+                        !chatId.isNullOrBlank() -> ChatScreen(
+                            repo = repo,
+                            chatId = chatId,
+                            padding = padding,
+                            onBack = { openChatId = null }
+                        )
+                    }
+                }
             }
         }
     }

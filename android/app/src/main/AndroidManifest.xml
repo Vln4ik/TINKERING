@@ -5,7 +5,8 @@
         android:allowBackup="true"
         android:label="Twinby MVP"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Twinby">
         <activity
             android:name=".MainActivity"
             android:exported="true">

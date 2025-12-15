@@ -4,7 +4,8 @@ import os
 import uuid
 from datetime import datetime
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import Request
+from fastapi import APIRouter, Depends, HTTPException, File, UploadFile
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
@@ -12,19 +13,28 @@ from app.api.deps import get_db, get_current_user
 from app.core.config import settings
 from app.db.models import Chat, Message, Swipe, SwipeDirection, User, UserInterest
 from app.schemas.chat import (
+    AttachmentResponse,
     ChatListItem,
     MessageItem,
     SendMessageRequest,
     SwipeRequest,
     SwipeResponse,
 )
+from app.utils.images import save_upload
 
 router = APIRouter(prefix="", tags=["chats"])
 
 
-def _photo_url(photo_path: str) -> str:
+def _photo_url(request: Request, photo_path: str) -> str:
     name = os.path.basename(photo_path)
-    return f"{settings.public_base_url.rstrip('/')}/static/{name}"
+    base = str(request.base_url).rstrip("/")
+    return f"{base}/static/{name}"
+
+
+def _static_url(request: Request, file_path: str) -> str:
+    name = os.path.basename(file_path)
+    base = str(request.base_url).rstrip("/")
+    return f"{base}/static/{name}"
 
 
 def _pair(a: uuid.UUID, b: uuid.UUID) -> tuple[uuid.UUID, uuid.UUID]:
@@ -70,7 +80,7 @@ def swipe(
 
 
 @router.get("/chats", response_model=list[ChatListItem])
-def list_chats(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def list_chats(request: Request, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     chats = (
         db.query(Chat)
         .filter(or_(Chat.user_a_id == user.id, Chat.user_b_id == user.id))
@@ -95,7 +105,7 @@ def list_chats(user: User = Depends(get_current_user), db: Session = Depends(get
                 chat_id=c.id,
                 other_user_id=other_id,
                 other_name=other.profile.name,
-                other_photo_url=_photo_url(other.profile.photo_path),
+                other_photo_url=_photo_url(request, other.profile.photo_path),
                 last_message=last.text if last else None,
                 last_message_at=last.created_at if last else None,
             )
@@ -145,5 +155,21 @@ def send_message(
     db.commit()
     db.refresh(m)
     return MessageItem(id=m.id, chat_id=m.chat_id, sender_id=m.sender_id, text=m.text, created_at=m.created_at)
+
+
+@router.post("/chats/{chat_id}/attachments", response_model=AttachmentResponse)
+def upload_attachment(
+    request: Request,
+    chat_id: uuid.UUID,
+    file: UploadFile = File(...),
+    user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    chat = db.get(Chat, chat_id)
+    if not chat or user.id not in {chat.user_a_id, chat.user_b_id}:
+        raise HTTPException(status_code=404, detail="Chat not found")
+
+    path = save_upload(settings.upload_dir, file)
+    return AttachmentResponse(url=_static_url(request, path), name=file.filename or "file", mime=file.content_type)
 
 

@@ -61,6 +61,10 @@ interface ApiService {
     @POST("/chats/{chatId}/messages")
     suspend fun sendMessage(@Path("chatId") chatId: String, @Body req: SendMessageRequest): MessageItem
 
+    @Multipart
+    @POST("/chats/{chatId}/attachments")
+    suspend fun uploadChatAttachment(@Path("chatId") chatId: String, @Part file: MultipartBody.Part): AttachmentResponse
+
     @GET("/support/messages")
     suspend fun supportMessages(): List<SupportMessageItem>
 

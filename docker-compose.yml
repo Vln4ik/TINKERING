@@ -27,6 +27,9 @@ services:
       GIGACHAT_SCOPE: ${GIGACHAT_SCOPE:-GIGACHAT_API_PERS}
       GIGACHAT_MODEL: ${GIGACHAT_MODEL:-GigaChat-2-Pro}
       GIGACHAT_VERIFY_SSL: ${GIGACHAT_VERIFY_SSL:-true}
+      # Make Python HTTP clients (requests/httpx) use OS CA bundle (updated by entrypoint)
+      SSL_CERT_FILE: /etc/ssl/certs/ca-certificates.crt
+      REQUESTS_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
     volumes:
       - uploads:/app/uploads
       - ./certs:/app/extra-ca:ro

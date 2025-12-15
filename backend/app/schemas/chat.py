@@ -36,3 +36,9 @@ class SwipeResponse(BaseModel):
     created_chat_id: uuid.UUID | None = None
 
 
+class AttachmentResponse(BaseModel):
+    url: str
+    name: str
+    mime: str | None = None
+
+

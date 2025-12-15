@@ -44,7 +44,7 @@ fun FeedScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+    Box(modifier = Modifier.fillMaxSize().padding(padding).padding(top = 8.dp)) {
         when {
             loading.value -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             error.value != null -> Text(

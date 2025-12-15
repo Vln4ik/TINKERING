@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 
+from fastapi import Request
 from fastapi import APIRouter, Depends, File, Form, UploadFile
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
@@ -15,13 +16,14 @@ from app.utils.images import save_upload
 router = APIRouter(prefix="/me", tags=["me"])
 
 
-def _photo_url(photo_path: str) -> str:
+def _photo_url(request: Request, photo_path: str) -> str:
     name = os.path.basename(photo_path)
-    return f"{settings.public_base_url.rstrip('/')}/static/{name}"
+    base = str(request.base_url).rstrip("/")
+    return f"{base}/static/{name}"
 
 
 @router.get("", response_model=ProfilePublic)
-def get_me(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def get_me(request: Request, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     profile = user.profile
     interests = [ui.interest_key for ui in db.query(UserInterest).filter(UserInterest.user_id == user.id).all()]
     return ProfilePublic(
@@ -30,13 +32,14 @@ def get_me(user: User = Depends(get_current_user), db: Session = Depends(get_db)
         gender=profile.gender.value,
         age=profile.age,
         about=profile.about,
-        photo_url=_photo_url(profile.photo_path),
+        photo_url=_photo_url(request, profile.photo_path),
         interests=interests,
     )
 
 
 @router.put("", response_model=ProfilePublic)
 def update_me(
+    request: Request,
     name: str | None = Form(default=None, max_length=64),
     gender: Gender | None = Form(default=None),
     age: int | None = Form(default=None, ge=18, le=99),
@@ -75,7 +78,7 @@ def update_me(
         gender=profile.gender.value,
         age=profile.age,
         about=profile.about,
-        photo_url=_photo_url(profile.photo_path),
+        photo_url=_photo_url(request, profile.photo_path),
         interests=interests_out,
     )
 
